@@ -133,7 +133,6 @@ function AuthFeatureSlider() {
                       'grid h-12 w-12 shrink-0 place-items-center rounded-2xl border sm:h-14 sm:w-14',
                       slide.iconWrap,
                     )}
-                    
                   >
                     <Icon className="h-6 w-6 sm:h-7 sm:w-7" aria-hidden />
                   </div>
