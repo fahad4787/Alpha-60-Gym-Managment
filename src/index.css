@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: 10 12 16;
+    --panel: 14 17 23;
+    --text: 226 232 240;
+    --muted: 148 163 184;
+    --border: 30 41 59;
+    --brand: 16 185 129;
+    --danger: 248 113 113;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background-color: rgb(var(--bg));
+    color: rgb(var(--text));
+  }
+
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-gym-surface {
+    background-color: rgb(8 10 14);
+    background-image:
+      radial-gradient(1000px 420px at 15% 0%, rgba(16, 185, 129, 0.11), transparent 52%),
+      radial-gradient(800px 360px at 92% 8%, rgba(100, 116, 139, 0.08), transparent 48%),
+      linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, transparent 28%),
+      repeating-linear-gradient(
+        -14deg,
+        transparent 0 36px,
+        rgba(30, 41, 59, 0.2) 36px 37px
+      );
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: translateX(-60%);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateX(110%);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateX(260%);
+    opacity: 0.45;
+  }
+}
+
+@keyframes modalIn {
+  0% {
+    transform: translateY(10px) scale(0.98);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes authFadeUp {
+  0% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes authCardReveal {
+  0% {
+    transform: translateY(24px) scale(0.97);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes dashFadeUp {
+  0% {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes dashHeroLine {
+  0% {
+    transform: scaleX(0.35);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes navIconAlive {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
