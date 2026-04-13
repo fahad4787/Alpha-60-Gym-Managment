@@ -30,7 +30,15 @@ The first signed-up user creates the `app/bootstrap` doc; after that only sign-i
 
 Your app is a static SPA; GitHub Pages can host `dist` after each push to `main`.
 
-1. **Repository secrets** (GitHub → **Settings** → **Secrets and variables** → **Actions** → **Repository secrets** → **New repository secret**). Use the **Repository** tab, not only the environment tab—otherwise the build step cannot read them. Add the same names as in `.env.example`:
+1. **Repository secrets** — either paste each in the GitHub UI, or from the project root (with [GitHub CLI](https://cli.github.com/) installed and `gh auth login` done):
+
+   ```bash
+   ./scripts/sync-github-actions-secrets.sh
+   ```
+
+   This reads `.env.production` and sets every `VITE_*` variable as a repository secret for `fahad4787/Alpha-60-Gym-Managment`. Override repo: `GITHUB_REPO=owner/other-repo ./scripts/sync-github-actions-secrets.sh`. Use another file: `./scripts/sync-github-actions-secrets.sh .env.local`.
+
+   Manual option: **Settings** → **Secrets and variables** → **Actions** → **Repository secrets** → **New repository secret**. Use the **Repository** tab. Add the same names as in `.env.example`:
    - `VITE_FIREBASE_API_KEY`
    - `VITE_FIREBASE_AUTH_DOMAIN`
    - `VITE_FIREBASE_PROJECT_ID`
