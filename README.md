@@ -30,13 +30,13 @@ The first signed-up user creates the `app/bootstrap` doc; after that only sign-i
 
 Your app is a static SPA; GitHub Pages can host `dist` after each push to `main`.
 
-1. **Repository secrets** (GitHub → **Settings** → **Secrets and variables** → **Actions** → **Repository secrets** → **New repository secret**). Use the **Repository** tab, not only the environment tab—otherwise the build step cannot read them. Add the same names as in `.env.example`:
-   - `VITE_FIREBASE_API_KEY`
-   - `VITE_FIREBASE_AUTH_DOMAIN`
-   - `VITE_FIREBASE_PROJECT_ID`
-   - `VITE_FIREBASE_STORAGE_BUCKET`
-   - `VITE_FIREBASE_MESSAGING_SENDER_ID`
-   - `VITE_FIREBASE_APP_ID`
+1. **Repository secrets** (GitHub → **Settings** → **Secrets and variables** → **Actions** → **Repository secrets**).
+
+   **Option A — one secret (simplest):** Create **`env_production`**. In **Secret**, paste your entire local `.env.production` file (six `VITE_FIREBASE_*` lines, same format as on disk). **Name** must be exactly `env_production`.
+
+   **Option B — six secrets:** Add each name from `.env.example` (`VITE_FIREBASE_API_KEY`, `VITE_FIREBASE_AUTH_DOMAIN`, …) with matching values.
+
+   Use the **Repository** tab so the workflow can read them.
 
 2. **Turn on Pages**  
    **Settings** → **Pages** → **Build and deployment** → **Source**: **GitHub Actions** (not “Deploy from a branch”).
