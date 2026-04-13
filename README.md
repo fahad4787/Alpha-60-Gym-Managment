@@ -1,4 +1,4 @@
-# Gym management
+# Alpha 60 Gym Management
 
 Owner dashboard for members, daily attendance, and monthly payments. React, TypeScript, Vite, Tailwind, Firebase Auth + Firestore.
 
