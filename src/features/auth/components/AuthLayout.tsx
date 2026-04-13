@@ -134,6 +134,7 @@ function AuthFeatureSlider() {
                       slide.iconWrap,
                     )}
                     
+                    
                   >
                     <Icon className="h-6 w-6 sm:h-7 sm:w-7" aria-hidden />
                   </div>
