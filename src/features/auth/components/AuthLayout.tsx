@@ -117,6 +117,7 @@ function AuthFeatureSlider() {
         <div
           className="h-px w-full bg-linear-to-r from-transparent via-emerald-500/45 to-transparent"
           aria-hidden="true"
+          
         />
         <div
           className="flex transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
