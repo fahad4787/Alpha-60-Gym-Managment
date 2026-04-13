@@ -30,7 +30,7 @@ The first signed-up user creates the `app/bootstrap` doc; after that only sign-i
 
 Your app is a static SPA; GitHub Pages can host `dist` after each push to `main`.
 
-1. **Repository secrets** (GitHub → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**). Add the same names as in `.env.example`:
+1. **Repository secrets** (GitHub → **Settings** → **Secrets and variables** → **Actions** → **Repository secrets** → **New repository secret**). Use the **Repository** tab, not only the environment tab—otherwise the build step cannot read them. Add the same names as in `.env.example`:
    - `VITE_FIREBASE_API_KEY`
    - `VITE_FIREBASE_AUTH_DOMAIN`
    - `VITE_FIREBASE_PROJECT_ID`
